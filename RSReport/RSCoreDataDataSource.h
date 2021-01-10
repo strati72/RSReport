@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RSDataSource.h"
+#import "CoreData/CoreData.h"
 
 @interface RSCoreDataDataSource : NSObject<RSDataSource> {
     NSFetchedResultsController *fetchedResultController;
