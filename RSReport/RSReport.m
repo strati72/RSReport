@@ -4,6 +4,7 @@
 //
 //  Created by Roberto Scarciello on 14/08/11.
 //  Copyright 2011 Roberto Scarciello. All rights reserved.
+//  Update 2025 Sergio Strati
 //
 
 #import "RSReport.h"
@@ -59,6 +60,7 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
         _pageSize = CGRectMake(0, 0, 612, 792);
         _documentDirectory = [self applicationSupportDirectory];
         _reportType = RSReportPDFType;
+	_columSeparator = @";";
     }
     
     return self;
@@ -189,6 +191,14 @@ NSString * const DirectoryLocationDomain = @"DirectoryLocationDomain";
 
 - (void)updateVPosition:(CGFloat)delta {
     _currentVPosition += delta;
+}
+
+- (NSString *) getColumSeparator {
+    return _columSeparator;
+}
+
+- (RSReportType) getReportType {
+    return _reportType;
 }
 
 - (CGFloat)getCurrentVPosition {
