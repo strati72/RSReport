@@ -5,6 +5,7 @@
 //  Created by Roberto Scarciello on 16/08/11.
 //  Copyright 2011 Roberto Scarciello. All rights reserved.
 //  Update 2025 Sergio Strati
+//
 
 #import "RSBodySection.h"
 #import "RSGenericItem.h"
