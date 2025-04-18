@@ -4,7 +4,7 @@
 //
 //  Created by Roberto Scarciello on 16/08/11.
 //  Copyright 2011 Roberto Scarciello. All rights reserved.
-//
+//  Update 2025 Sergio Strati
 
 #import "RSBodySection.h"
 #import "RSGenericItem.h"
@@ -31,9 +31,10 @@
     // Prepare CSV headers
     // Draw the items into the section
     for (RSGenericItem *gi in self.printableItems) {
-        sectionString = [NSString stringWithFormat:@"%@;%@",sectionString,gi.columnName];
+        sectionString = [NSString stringWithFormat:@"%@%@%@",sectionString,self.delegate.getColumSeparator,gi.columnName];
     }
     sectionString = [sectionString stringByAppendingString:@"\n"];
+    sectionString = [sectionString substringFromIndex:1];
     
     // Main cycle into data
     id<RSDataSource> dataSource = [self.delegate getDataSource];
