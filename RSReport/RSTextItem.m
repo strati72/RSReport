@@ -58,7 +58,7 @@
     } else {
         self.textToPrint = [NSString stringWithString:self.text];
     }
-    stringItem = [NSString stringWithFormat:@"%@;%@",stringItem,self.textToPrint];
+    stringItem = [NSString stringWithFormat:@"%@%@%@",stringItem,self.delegate.getColumSeparator,self.textToPrint];
     return stringItem;
 }
 
