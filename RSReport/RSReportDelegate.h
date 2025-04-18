@@ -4,10 +4,12 @@
 //
 //  Created by Roberto Scarciello on 14/08/11.
 //  Copyright 2011 Roberto Scarciello. All rights reserved.
+//  Update 2025 Sergio Strati 
 //
 
 #import <Foundation/Foundation.h>
 #import "RSDataSource.h"
+#import "RSTypes.h"
 
 @protocol RSReportDelegate <NSObject>
 
@@ -20,5 +22,6 @@
 - (BOOL)checkforFrame:(CGRect)frame;
 - (CGRect)getCurrentPageSize;
 - (void)evaluate:(id<RSDataSource>)object;
-
+- (NSString *) getColumSeparator;
+- (RSReportType) getReportType;
 @end
