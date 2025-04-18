@@ -4,6 +4,7 @@
 //
 //  Created by Roberto Scarciello on 15/08/11.
 //  Copyright 2011 Roberto Scarciello. All rights reserved.
+//  Update 2025 Sergio Strati
 //
 
 #import "RSSection.h"
@@ -43,6 +44,7 @@
         stringSection = [stringSection stringByAppendingString:[gi writeItemToString]];
     }
     stringSection = [stringSection stringByAppendingString:@"\n"];
+    stringSection = [stringSection substringFromIndex:1];
     return stringSection;
 }
 
@@ -102,6 +104,14 @@
 
 - (CGPoint)getReferenceSectionPoint {
     return _frame.origin;
+}
+
+- (NSString *) getColumSeparator {
+    return self.delegate.getColumSeparator;
+}
+
+- (RSReportType ) getReportType {
+    return self.delegate.getReportType;
 }
 
 - (void)evaluate {
