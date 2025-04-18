@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "RSDataSource.h"
+#import "RSTypes.h"
 
 @protocol RSSectionDelegate <NSObject>
 
@@ -15,5 +16,7 @@
 
 - (id<RSDataSource>)getDataSource;
 - (CGPoint)getReferenceSectionPoint;
+- (NSString *) getColumSeparator;
+- (RSReportType) getReportType;
 
 @end
